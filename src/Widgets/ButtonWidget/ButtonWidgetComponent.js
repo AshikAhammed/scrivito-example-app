@@ -27,7 +27,7 @@ Scrivito.provideComponent("ButtonWidget", ({ widget }) => {
   return (
     <WrapIfClassName className={wrapperClassName}>
       <Scrivito.LinkTag to={target} className={classNames.join(" ")}>
-        {text}
+      {'💠'} {text}
         <i className="fa fa-angle-right fa-4" aria-hidden="true" />
       </Scrivito.LinkTag>
     </WrapIfClassName>
