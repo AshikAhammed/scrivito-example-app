@@ -18,6 +18,7 @@ const Homepage = Scrivito.provideObjClass("Homepage", {
     googleMapsApiKey: "string",
     googleAnalyticsTrackingId: "string",
     intercomAppId: "string",
+    sidebar:"widgetlist",
     ...metadataAttributes,
   },
   extractTextAttributes: ["navigationSection", "body"],
