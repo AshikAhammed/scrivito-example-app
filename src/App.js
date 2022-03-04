@@ -28,7 +28,6 @@ export default function App() {
                 <div color="col-md-3">
                   <Sidebar />
                 </div>
-
                 <div className="col-md-9">
                   <Scrivito.CurrentPage />
                 </div>
