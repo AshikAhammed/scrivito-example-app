@@ -24,6 +24,9 @@ export default function App() {
             <div className="content-wrapper">
               <Navigation />
 
+              <Scrivito.CurrentPage />
+
+{/* 
               <div className="row">
                 <div color="col-md-3">
                   <Sidebar />
@@ -31,7 +34,7 @@ export default function App() {
                 <div className="col-md-9">
                   <Scrivito.CurrentPage />
                 </div>
-              </div>
+              </div> */}
 
               <NotFoundErrorPage />
             </div>
