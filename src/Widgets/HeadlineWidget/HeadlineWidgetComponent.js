@@ -6,6 +6,7 @@ import "./HeadlineWidget.scss";
 Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   const style = widget.get("style") || "h2";
   const level = widget.get("level") || style;
+  const bgColor = widget.get("bgColor");
   const classNames = ["headline-widget", style];
   if (widget.get("alignment")) {
     classNames.push(`text-${widget.get("alignment")}`);
@@ -15,6 +16,9 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   }
   if (!widget.get("showMargin")) {
     classNames.push("no-margin");
+  }
+  if (bgColor) {
+    classNames.push(`bg-${bgColor}`);
   }
 
   return (

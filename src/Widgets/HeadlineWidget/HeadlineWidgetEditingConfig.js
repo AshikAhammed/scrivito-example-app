@@ -5,6 +5,10 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
   title: "Headline",
   thumbnail: headlineWidgetIcon,
   attributes: {
+    bgColor: {
+      title: "Background color",
+      description: "The background color of the headline text",
+    },
     style: {
       title: "Style",
       description: "Size and font of this headline. Default: Heading 2",
@@ -49,10 +53,11 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
       description: "A margin adds space around this headline. Default: Yes",
     },
   },
-  properties: ["style", "level", "alignment", "showDividingLine", "showMargin"],
+  properties: ["bgColor","style", "level", "alignment", "showDividingLine", "showMargin"],
   initialContent: {
     alignment: "left",
     headline: "Lorem Ipsum",
+    bgColor:'primary',
     showMargin: true,
     style: "h2",
   },
