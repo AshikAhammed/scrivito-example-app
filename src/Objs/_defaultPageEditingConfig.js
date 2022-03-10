@@ -32,6 +32,7 @@ export const defaultPageInitialContent = {
     }),
   ],
   navigationHeight: "small",
+  navigationBackgroundImageGradient: true,
 };
 
 export function defaultPageProperties(obj) {
