@@ -57,7 +57,7 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
   initialContent: {
     alignment: "left",
     headline: "Lorem Ipsum",
-    bgColor:'primary',
+    bgColor:'',
     showMargin: true,
     style: "h2",
   },

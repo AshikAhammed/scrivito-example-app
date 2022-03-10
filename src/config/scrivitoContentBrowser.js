@@ -129,4 +129,5 @@ const PAGES = [
   "Homepage",
   "Blog",
   "SearchResults",
+  "FaqPage",
 ];
