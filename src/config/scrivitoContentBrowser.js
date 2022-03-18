@@ -113,6 +113,7 @@ const FILTER_PRESENTATIONS = {
   Job: { title: "Jobs", icon: "suitcase" },
   LandingPage: { title: "Landing pages", icon: "inbox" },
   Page: { title: "Standard pages", icon: "sheet" },
+  FaqPage: { title: "Standard pages", icon: "sheet" },
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },

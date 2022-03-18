@@ -1,7 +1,14 @@
 import * as Scrivito from "scrivito";
+import metadataAttributes from "../_metadataAttributes";
+import defaultPageAttributes from "../_defaultPageAttributes";
 
-Scrivito.provideObjClass("FaqPage", {
+const FaqPage = Scrivito.provideObjClass("FaqPage", {
   attributes: {
-    questions: "widgetlist",
+    ...defaultPageAttributes,
+    questions:[ "widgetlist", {only: 'FaqWidget'}],
+    ...metadataAttributes,
   },
+  extractTextAttributes: ["navigationSection", "body"],
 });
+
+export default FaqPage;

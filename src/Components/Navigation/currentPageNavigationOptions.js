@@ -18,6 +18,8 @@ function currentPageNavigationOptions() {
         return landingPageNavigationOptions(Scrivito.currentPage());
       case "Page":
         return pageNavigationOptions(Scrivito.currentPage());
+        case "FaqPage":
+          return homepageNavigationOptions(Scrivito.currentPage());
       case "SearchResults":
         return searchResultsNavigationOptions(Scrivito.currentPage());
       default:

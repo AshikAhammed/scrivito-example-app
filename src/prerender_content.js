@@ -26,6 +26,7 @@ const SITEMAP_OBJ_CLASSES_WHITELIST = [
   "Job",
   "LandingPage",
   "Page",
+  "FaqPage",
 ];
 
 const SOURCE_DIR = "build";
