@@ -6,4 +6,5 @@ Scrivito.provideComponent("FaqPage", ({ page }) => {
     <h1 className="text-center">FQA</h1>
     <Scrivito.ContentTag  content={page} attribute="questions" />
   </div>;
+
 });
