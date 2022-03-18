@@ -1,5 +1,5 @@
 import * as Scrivito from "scrivito";
-import faqIcon from "../../assets/images/favicon.png";
+import faqIcon from "../../assets/images/faq.png";
 
 Scrivito.provideEditingConfig("FaqWidget", {
   title: "FaqWidget",
@@ -7,6 +7,9 @@ Scrivito.provideEditingConfig("FaqWidget", {
   // description: "A frequently asked question.",
 
   attributes: {
+    backgroundColor: {
+      title: "Background color",
+    },
     question: {
       title: "Question",
       description: "State the frequently asked question",

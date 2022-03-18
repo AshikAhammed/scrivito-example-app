@@ -5,10 +5,10 @@ import defaultPageAttributes from "../_defaultPageAttributes";
 const FaqPage = Scrivito.provideObjClass("FaqPage", {
   attributes: {
     ...defaultPageAttributes,
-    questions:[ "widgetlist", {only: 'FaqWidget'}],
+    question:[ "widgetlist", {only: 'FaqWidget'}],
     ...metadataAttributes,
   },
-  extractTextAttributes: ["navigationSection", "body"],
+  extractTextAttributes: ["navigationSection", "question"],
 });
 
 export default FaqPage;
