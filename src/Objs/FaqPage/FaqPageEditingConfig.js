@@ -33,7 +33,7 @@ Scrivito.provideEditingConfig("FaqPage", {
   initialContent: {
     ...defaultPageInitialContent,
     ...metadataInitialContent,
-    questions: [
+    question: [
       new DividerWidget({ showLogo: "no" }),
       new HeadlineWidget({ headline: "The questions is?" }),
       new TextWidget({
