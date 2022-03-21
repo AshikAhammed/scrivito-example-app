@@ -63,6 +63,7 @@
     "react-helmet-async": "^1.1.2",
     "react-highlight-words": "^0.17.0",
     "react-reveal-iframe": "^1.2.7",
+    "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
     "reactstrap": "^8.10.0",
     "sass": "^1.49.0",
