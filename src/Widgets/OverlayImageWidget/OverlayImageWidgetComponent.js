@@ -26,6 +26,7 @@ Scrivito.provideComponent("OverlayImageWidget", ({ widget }) => {
 
   return (
     <div className="position-relative mb-3">
+    <h1 className="text-center">Learn Overlay Image</h1>
      
         <Scrivito.ImageTag
           content={widget}
