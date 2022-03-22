@@ -75,6 +75,7 @@ function defaultFilters() {
         },
         Download: filterOptionsForObjClass("Download"),
         Video: filterOptionsForObjClass("Video"),
+        Product: filterOptionsForObjClass("Product"),
       },
     },
     _modification: {
@@ -117,6 +118,7 @@ const FILTER_PRESENTATIONS = {
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },
+  Product:{title: "Products", icon: "tag"},
 };
 
 const PAGES = [
