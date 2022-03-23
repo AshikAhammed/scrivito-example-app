@@ -62,6 +62,7 @@
     "react-draggable": "^4.4.4",
     "react-helmet-async": "^1.1.2",
     "react-highlight-words": "^0.17.0",
+    "react-js-pagination": "^3.0.3",
     "react-reveal-iframe": "^1.2.7",
     "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
