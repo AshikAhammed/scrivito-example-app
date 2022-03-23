@@ -4,7 +4,7 @@ import ProductView from "../../Components/ProductView";
 
 Scrivito.provideComponent("ProductListWidget", ({ widget }) => {
   const containerClass = `container bg-${widget.get("bgColor") || "white"}`;
-  const products = Scrivito.getClass("Product").all().order("title", "asc");
+  const products = Scrivito.getClass("Product").all().and("tags","equals",tag).order("title", "asc");
   if (!products) {
     return <p>No Products available. Create some using the Content Browser.</p>;
   }

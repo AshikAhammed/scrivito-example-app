@@ -4,10 +4,10 @@ import * as Scrivito from "scrivito";
 function ProductView({ product }) {
   return (
     <div className="row">
-      <div className="col-2">
+      <div className="col-sm-2">
         <Scrivito.ImageTag content={product} attribute="image" />
       </div>
-      <div className="col-7">
+      <div className="col-sm-7">
         <Scrivito.ContentTag tag="h3" content={product} attribute="title" />
 
         <Scrivito.ContentTag
@@ -16,10 +16,10 @@ function ProductView({ product }) {
           attribute="description"
         />
       </div>
-      <div className="col-3">
+      <div className="col-sm-3">
         <h3>
           <small>$</small>
-          {product.get("price")}{" "}
+          {product.get("price")}
         </h3>
         <Scrivito.ContentTag tag="small" content={product} attribute="orderCode" />
       </div>
