@@ -6,6 +6,9 @@ Scrivito.provideEditingConfig("PaginatedListWidget", {
   description: "Displays paginated search results",
   thumbnail: LinkListWidgetIcon,
 
+
+  properties: ["itemsCountPerPage", "pageRangeDisplayed"],
+
   attributes: {
     itemsCountPerPage: {
       title: "Items per result page",
@@ -22,5 +25,4 @@ Scrivito.provideEditingConfig("PaginatedListWidget", {
     pageRangeDisplayed: 10,
   },
 
-  properties: ["itemsCountPerPage", "pageRangeDisplayed"],
 });

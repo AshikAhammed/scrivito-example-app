@@ -2,7 +2,7 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideWidgetClass("PaginatedListWidget", {
   attributes: {
-    itemCounterPerPage: "integer",
+    itemsCountPerPage: "integer",
     pageRangeDisplayed: "integer",
   },
 });

@@ -19,12 +19,13 @@ class PaginatedListWidget extends React.Component {
     const itemsCountPerPage = this.props.widget.get("itemsCountPerPage");
     const pageRangeDisplayed = this.props.widget.get("pageRangeDisplayed");
 
-    const query = Scrivito.getClass("page")
+    const query = Scrivito.getClass("Page")
       .all()
       .order("title", "asc")
       .offset((this.state.activePage - 1) * itemsCountPerPage);
 
     const totalItemsCount = query.count();
+
 
     if (totalItemsCount === 0) {
       return <p>No items found!</p>;
@@ -40,24 +41,26 @@ class PaginatedListWidget extends React.Component {
 
         <div id="item-list">
           {items.map((item) => {
-            <div className="result-item" key={item.id()}>
-              <div className="result-content">
-                <p>
-                  <Scrivito.LinkTag className="h3" to={item}>
-                    {item.get("title") || "Untitled"}
-                  </Scrivito.LinkTag>
-                  <br />
-                  <Scrivito.LinkTag to={item}>
-                    {Scrivito.urlFor(item)}
-                  </Scrivito.LinkTag>
-                </p>
-                <p>{item.get("metaDataDescription")} || "No Description" </p>
+            return (
+              <div className="result-item" key={item.id()}>
+                <div className="result-content">
+                  <p>
+                    <Scrivito.LinkTag className="h3" to={item}>
+                      {item.get("title") || "Untitled"}
+                    </Scrivito.LinkTag>
+                    <br />
+                    <Scrivito.LinkTag to={item}>
+                      {Scrivito.urlFor(item)}
+                    </Scrivito.LinkTag>
+                  </p>
+                  <p>{item.get("metaDataDescription") || "No description" } </p>
+                </div>
               </div>
-            </div>;
+            );
           })}
         </div>
 
-        <div className="nav">
+        <div className="nav justify-content-center">
           <Pagination
             activePage={this.state.activePage}
             itemsCountPerPage={itemsCountPerPage}
