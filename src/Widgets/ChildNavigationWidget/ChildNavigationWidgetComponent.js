@@ -34,7 +34,12 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
     </div>
     
   );
-  const ParentLink = Scrivito.connect(props => {
+
+
+});
+
+
+const ParentLink = Scrivito.connect(props => {
     let target = props.page;
     if (!target || !target.parent()) {
       return null;
@@ -51,4 +56,24 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
     );
   });
 
-});
+function renderChild (child) {
+    let className = "";
+
+    if(child.id() === 
+    Scrivito.currentPage().id()
+    ){
+        className="strong";
+    }
+
+
+    return (
+        <li className={ `child ${className}`}>
+            <Scrivito.LinkTag to={child}>
+
+                {child.get("title")}
+
+            </Scrivito.LinkTag>
+
+        </li>
+    )
+}
