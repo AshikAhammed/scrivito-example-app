@@ -34,7 +34,7 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
     </div>
     
   );
-  const ParentLink = Scrivito.connect((props) => {
+  const ParentLink = Scrivito.connect(props => {
     let target = props.page;
     if (!target || !target.parent()) {
       return null;

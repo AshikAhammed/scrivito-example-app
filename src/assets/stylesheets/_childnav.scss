@@ -1,0 +1,32 @@
+.childNav {
+  .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ff6b6b;
+  }
+
+  .parent {
+    a {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  .page-list {
+    li:hover:before {
+      color: #ff6b6b;
+    }
+    a {
+      &:link {
+        font-family: "Source Sans Pro";
+        display: inline-block;
+        padding: 5px;
+      }
+      &:visited {
+      }
+      &:hover {
+        color: #3ac7bd;
+      }
+    }
+  }
+}
