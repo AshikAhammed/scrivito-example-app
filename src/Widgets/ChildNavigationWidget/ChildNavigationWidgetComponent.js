@@ -9,7 +9,6 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
   }
 
   return (
-      
     <div className="childNav">
       <Scrivito.ContentTag
         tag="h4"
@@ -18,10 +17,7 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
         attribute="navTitle"
       />
 
-      <ParentLink page={parentPage} 
-      
-      
-      />
+      <ParentLink page={parentPage} />
 
       <Scrivito.ChildListTag
         tag="url"
@@ -29,51 +25,49 @@ Scrivito.provideComponent("ChildNavigationWidget", ({ widget }) => {
         parent={parentPage}
         renderChild={renderChild}
       />
-
-      
     </div>
-    
   );
-
-
 });
 
+const ParentLink = Scrivito.connect((props) => {
+  let target = props.page;
+  if (!target || !target.parent()) {
+    return null;
+  }
 
-const ParentLink = Scrivito.connect(props => {
-    let target = props.page;
-    if (!target || !target.parent()) {
-      return null;
-    }
+  if (target.id() === Scrivito.currentPage().id()) {
+    target = target.parent();
+  }
 
-    if (target.id() === Scrivito.currentPage().id()) {
-      target = target.parent();
-    }
+  return (
+    <div className="parent">
+      <Scrivito.LinkTag to={target}>{target.get("title")}</Scrivito.LinkTag>
+    </div>
+  );
+});
 
-    return (
-      <div className="parent">
-        <Scrivito.LinkTag to={target}>{target.get("title")}</Scrivito.LinkTag>
-      </div>
-    );
-  });
+function renderChild(child) {
+  let className = "";
 
-function renderChild (child) {
-    let className = "";
+  if (child.id() === Scrivito.currentPage().id()) {
+    className = "strong";
+  }
 
-    if(child.id() === 
-    Scrivito.currentPage().id()
-    ){
-        className="strong";
-    }
+  return (
+    <li className={`child ${className}`}>
+      <Scrivito.LinkTag to={child}>{child.get("title")}</Scrivito.LinkTag>
 
+      {newFlag(child)}
+    </li>
+  );
+}
+const currentDate = Date.now();
+const fortnight = 1000 * 60 * 60 * 24 * 7;
 
-    return (
-        <li className={ `child ${className}`}>
-            <Scrivito.LinkTag to={child}>
+function newFlag(child) {
+  const createdAt = child.createdAt();
 
-                {child.get("title")}
-
-            </Scrivito.LinkTag>
-
-        </li>
-    )
+  if (createdAt && currentDate - createdAt < fortnight) {
+    return <i className="fa fa-star fa-1x small initialism">new</i>;
+  }
 }
