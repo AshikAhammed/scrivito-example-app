@@ -32,12 +32,12 @@ class FileUploadWidgetComponent extends React.Component {
       formData.append("files", this.state.files[i]);
     }
 
-    fetch("https://hookb.in/your_path", {
+    fetch("https://hookb.in/E7GXz7XNVDcVjY669Jk9", {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
-      .then((response) => {
+      .then(response => {
         this.pond.removeFiles();
         this.setState({
           renderSuccess: true,
@@ -46,7 +46,7 @@ class FileUploadWidgetComponent extends React.Component {
         });
       })
 
-      .catch((error) => {
+      .catch(error=> {
         this.setState({
           renderSuccess: false,
           renderFailure: true,
@@ -81,7 +81,7 @@ class FileUploadWidgetComponent extends React.Component {
 
   render() {
     let submitDisabled =
-      this.state.files.length === 0 || this.state.email || this.state.inSubmit;
+      this.state.files.length === 0 || !this.state.email || this.state.inSubmit;
 
     return (
       <div className="container">
