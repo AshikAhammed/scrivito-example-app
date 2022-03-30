@@ -23,10 +23,7 @@ if (endpoint) {
 const BUILD_DIR = "build";
 
 function webpackConfig(env = {}) {
-  if (
-    !process.env.SCRIVITO_TENANT ||
-    process.env.SCRIVITO_TENANT === ""
-  ) {
+  if (!process.env.SCRIVITO_TENANT || process.env.SCRIVITO_TENANT === "") {
     throw new Error(
       'Environment variable "SCRIVITO_TENANT" is not defined!' +
         ' Check if the ".env" file with a proper SCRIVITO_TENANT is set.' +
@@ -99,6 +96,12 @@ function webpackConfig(env = {}) {
           test: /\.(jpg|png|eot|svg|ttf|woff|woff2|gif)$/,
           type: "asset/resource",
         },
+
+        {
+          test: /\.js$/,
+          enforce: "pre",
+          use: ["source-map-loader"],
+        },
       ],
     },
     output: {
@@ -152,7 +155,9 @@ function webpackConfig(env = {}) {
         template: "_scrivito_extensions.html",
         chunks: ["scrivito_extensions"],
       }),
-      new webpack.SourceMapDevToolPlugin({}),
+      new webpack.SourceMapDevToolPlugin({
+        fileName: "[file].map",
+      }),
       new WebpackManifestPlugin({ fileName: "asset-manifest.json" }),
     ],
     resolve: {

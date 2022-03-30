@@ -1,5 +1,7 @@
+import * as React from "react";
 import * as Scrivito from "scrivito";
 import imageWidgetIcon from "../../assets/images/image_widget.svg";
+import { InstagramStyleTab } from "../../Components/ScrivitoExtensions/InstagramStyleTab";
 
 Scrivito.provideEditingConfig("ImageWidget", {
   title: "Image",
@@ -56,5 +58,15 @@ Scrivito.provideEditingConfig("ImageWidget", {
         }
       },
     ],
+  ],
+
+  propertiesGroups: (widget) => [
+    {
+      title: "Instagram style",
+      key: "instagram-style-tab",
+      component: () => {
+        <InstagramStyleTab widget={widget} />;
+      },
+    },
   ],
 });

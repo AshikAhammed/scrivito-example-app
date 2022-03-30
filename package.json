@@ -89,5 +89,8 @@
     "start": "webpack serve",
     "eslint": "eslint --max-warnings 0 *.js src/",
     "es-check": "npm run build && es-check es5 './build/**/*.js'"
+  },
+  "devDependencies": {
+    "source-map-loader": "^3.0.1"
   }
 }
