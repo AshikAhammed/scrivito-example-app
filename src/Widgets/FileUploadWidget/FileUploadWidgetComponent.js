@@ -35,7 +35,11 @@ class FileUploadWidgetComponent extends React.Component {
     fetch("https://hookb.in/E7GXz7XNVDcVjY669Jk9", {
       method: "POST",
       body: formData,
-    })
+      headers:{
+          "Content-Type": "application/json",
+          "Content-Length": data.length
+      }
+    },true)
       .then((response) => response.json())
       .then(response => {
         this.pond.removeFiles();
@@ -44,6 +48,7 @@ class FileUploadWidgetComponent extends React.Component {
           renderFailure: false,
           inSubmit: false,
         });
+        console.log(response.data)
       })
 
       .catch(error=> {
