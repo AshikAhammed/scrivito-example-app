@@ -62,9 +62,21 @@ const NavSingleChild = Scrivito.connect(({ child, open, ...otherProps }) => {
     classNames.push("active");
   }
 
+  let menuIcon = child.get("menuIcon");
+
+  if (menuIcon) {
+    menuIcon = (
+      <i
+        className={`fa ${menuIcon} fa-1x fa-fw text-muted mr-2`}
+        aria-hidden="true"
+      ></i>
+    );
+  }
+
   return (
     <li className={classNames.join(" ")} {...otherProps}>
-      <Scrivito.LinkTag to={child} className="nav-link">
+      <Scrivito.LinkTag to={child} className="nav-link text-left text-nowrap">
+        {menuIcon}
         {child.get("title") || "<untitled>"}
       </Scrivito.LinkTag>
     </li>

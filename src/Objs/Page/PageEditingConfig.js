@@ -19,21 +19,20 @@ Scrivito.provideEditingConfig("Page", {
   attributes: {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
-    menuIcon:{
+    menuIcon: {
       title: "Menu icon",
       description: "Default: none",
       values: [
-        { value: "", title: ""},
-        { value: "", title: ""},
-        { value: "", title: ""},
-        { value: "", title: ""},
-        { value: "", title: ""},
-        { value: "", title: ""},
-
-      ]
-    }
+        { value: "fa-var-globe", title: "Globe" },
+        { value: "fa-var-user", title: "User" },
+        { value: "fa-var-paper-plane-o", title: "Plane" },
+        { value: "fa-var-cogs", title: "Cogs" },
+        { value: "fa-var-star-o", title: "Star" },
+        { value: "fa-var-heart-o", title: "Heart" },
+      ],
+    },
   },
-  properties: (obj) => [...defaultPageProperties(obj)],
+  properties: (obj) => ["menuIcon",...defaultPageProperties(obj)],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,

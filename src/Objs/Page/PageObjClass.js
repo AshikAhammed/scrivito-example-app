@@ -11,12 +11,12 @@ const Page = Scrivito.provideObjClass("Page", {
       "enum",
       {
         values: [
-          "fa-globe",
-          "fa-user",
-          "fa-paper-plane-o",
-          "fa-cogs",
-          "fa-star-o",
-          "fa-heart-o",
+          "fa-var-globe",
+          "fa-var-user",
+          "fa-var-paper-plane-o",
+          "fa-var-cogs",
+          "fa-var-star-o",
+          "fa-var-heart-o",
         ],
       },
     ],
