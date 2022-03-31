@@ -3,6 +3,7 @@ import { configureHistory } from "./history";
 import { configureObjClassForContentType } from "./objClassForContentType";
 import { configureScrivitoContentBrowser } from "./scrivitoContentBrowser";
 import { configureWindowScrivito } from "./windowScrivito";
+import { scrivitoExtendMenu} from "./scrivitoExtendMenu";
 
 export function configure(options) {
   configureScrivito(options);
@@ -12,5 +13,6 @@ export function configure(options) {
     configureScrivitoContentBrowser();
     configureHistory();
     configureWindowScrivito();
+    scrivitoExtendMenu();
   }
 }
