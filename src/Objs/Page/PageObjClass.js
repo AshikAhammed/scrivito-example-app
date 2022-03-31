@@ -7,6 +7,19 @@ const Page = Scrivito.provideObjClass("Page", {
     ...defaultPageAttributes,
     childOrder: "referencelist",
     ...metadataAttributes,
+    menuIcon: [
+      "enum",
+      {
+        values: [
+          "fa-globe",
+          "fa-user",
+          "fa-paper-plane-o",
+          "fa-cogs",
+          "fa-star-o",
+          "fa-heart-o",
+        ],
+      },
+    ],
   },
   extractTextAttributes: ["navigationSection", "body"],
 });

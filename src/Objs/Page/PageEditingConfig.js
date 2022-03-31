@@ -19,6 +19,19 @@ Scrivito.provideEditingConfig("Page", {
   attributes: {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
+    menuIcon:{
+      title: "Menu icon",
+      description: "Default: none",
+      values: [
+        { value: "", title: ""},
+        { value: "", title: ""},
+        { value: "", title: ""},
+        { value: "", title: ""},
+        { value: "", title: ""},
+        { value: "", title: ""},
+
+      ]
+    }
   },
   properties: (obj) => [...defaultPageProperties(obj)],
   propertiesGroups: [...metadataPropertiesGroups],
