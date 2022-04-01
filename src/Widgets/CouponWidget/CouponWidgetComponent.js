@@ -1,12 +1,24 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import { kebabCase } from "lodash-es";
+import "./CouponWidget.scss";
 
 Scrivito.provideComponent("CouponWidget", ({ widget }) => {
+  const style = widget.get("style");
+  const bgColor = widget.get("bgColor");
   const couponConfig = Scrivito.Obj.getByPermalink("couponConfig");
+  const classNames = ["coupon-widget", style];
+
+  if (bgColor) {
+    classNames.push(`bg-${bgColor}`);
+  }
 
   return (
     <Scrivito.InPlaceEditingOff>
-      <div className="card text-center bg-warning">
+      <div
+        className={classNames.join("")}
+        id={kebabCase(widget.get("coupon-widget"))}
+      >
         <div className="card-body pb-0">
           <Scrivito.ContentTag
             content={couponConfig}
