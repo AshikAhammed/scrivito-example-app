@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 import imageWidgetIcon from "../../assets/images/image_widget.svg";
 import { InstagramStyleTab } from "../../Components/ScrivitoExtensions/InstagramStyleTab";
+import { ImageShapePicker} from "../../Components/ScrivitoExtensions/ImageShapePicker";
 
 Scrivito.provideEditingConfig("ImageWidget", {
   title: "Image",
