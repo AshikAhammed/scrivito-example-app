@@ -2,7 +2,21 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 import imageWidgetIcon from "../../assets/images/image_widget.svg";
 import { InstagramStyleTab } from "../../Components/ScrivitoExtensions/InstagramStyleTab";
-import { ImageShapePicker} from "../../Components/ScrivitoExtensions/ImageShapePicker";
+import { ImageShapePicker } from "../../Components/ScrivitoExtensions/ImageShapePicker";
+
+const shapes = [
+  [
+    { value: "none", title: "None" },
+    { value: "smallCircle", title: "Small circle" },
+    { value: "largeCircle", title: "Large circle" },
+    { value: "smallInset", title: "Small inset" },
+    { value: "largeInset", title: "Large inset" },
+    { value: "star", title: "Star" },
+    { value: "triangle", title: "Triangle" },
+    { value: "octagon", title: "Octagon" },
+    { value: "butterfly", title: "Butterfly" },
+  ],
+];
 
 Scrivito.provideEditingConfig("ImageWidget", {
   title: "Image",
@@ -68,6 +82,14 @@ Scrivito.provideEditingConfig("ImageWidget", {
       component: () => {
         <InstagramStyleTab widget={widget} />;
       },
+    },
+
+    {
+      title: "Shape",
+      key: "shape",
+      component: ({ widget }) => (
+        <ImageShapePicker widget={widget} shapes={shapes} />
+      ),
     },
   ],
 });

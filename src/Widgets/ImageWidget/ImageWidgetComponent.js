@@ -1,12 +1,14 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import AnimateOnReveal from "../../Components/AnimateOnReveal";
+import imageStyle from "./imageStyle";
 
 Scrivito.provideComponent("ImageWidget", ({ widget }) => {
   let image = (
     <Scrivito.ImageTag
       content={widget}
       attribute="image"
+      style = {imageStyle(widget.get("clipShape"))}
       alt={alternativeText(widget)}
     />
   );

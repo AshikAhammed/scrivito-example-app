@@ -1,0 +1,65 @@
+.image_shape_picker {
+  clear: both;
+  padding: 15px 0 0 15px;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  user-select: none;
+
+  li {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 100px;
+    margin: 0 15px 15px 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s linear;
+    width: 130px;
+
+    &:hover {
+      box-shadow: 0 0 7px 0 #555;
+    }
+
+    &.active {
+      box-shadow: 0 0 0 3px #658b51, 0 0 4px 6px hsla(0, 0%, 100%, 0.3);
+    }
+  }
+}
+
+&__preview {
+  background: #e3e3e3;
+  background-size: cover;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+&__meta {
+  color: #555;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  height: 30px;
+  padding: 2px 25px 0 5px;
+  position: relative;
+  z-index: 2;
+
+  &__name {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
